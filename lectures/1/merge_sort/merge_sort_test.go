@@ -18,10 +18,13 @@ var _ = Describe("MergeSort", func() {
 	var slice []int
 
 	It("should handle an empty slice", func() {
+		// input
 		slice = []int{1}
+
 		result := make([]int, len(slice))
 		copy(result, slice)
 
+		// sort result
 		sort.Sort(sort.IntSlice(result))
 		Expect(MergeSort(slice)).To(Equal(result))
 	})
