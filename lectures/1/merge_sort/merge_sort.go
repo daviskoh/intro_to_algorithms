@@ -1,5 +1,5 @@
 package merge_sort
 
-func MergeSort([]int) []int {
-	return []int{}
+func MergeSort(slice []int) []int {
+	return slice
 }

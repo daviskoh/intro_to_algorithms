@@ -33,7 +33,14 @@ var _ = Describe("MergeSort", func() {
 		shouldBeSorted(slice)
 	})
 
-	XIt("should handle a single value", func() {
+	It("should handle a single value", func() {
+		slice = []int{1}
+		shouldBeSorted(slice)
 
+		slice = []int{2}
+		shouldBeSorted(slice)
+
+		slice = []int{6}
+		shouldBeSorted(slice)
 	})
 })
