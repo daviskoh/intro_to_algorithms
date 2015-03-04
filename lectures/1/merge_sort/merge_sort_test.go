@@ -14,18 +14,26 @@ import (
  * func that takes slice of integers & returns it sorted
  */
 
+func shouldBeSorted(slice []int) {
+	result := make([]int, len(slice))
+	copy(result, slice)
+
+	// sort result
+	sort.Sort(sort.IntSlice(result))
+	Expect(MergeSort(slice)).To(Equal(result))
+}
+
 var _ = Describe("MergeSort", func() {
 	var slice []int
 
 	It("should handle an empty slice", func() {
 		// input
-		slice = []int{1}
+		slice = []int{}
 
-		result := make([]int, len(slice))
-		copy(result, slice)
+		shouldBeSorted(slice)
+	})
 
-		// sort result
-		sort.Sort(sort.IntSlice(result))
-		Expect(MergeSort(slice)).To(Equal(result))
+	XIt("should handle a single value", func() {
+
 	})
 })
