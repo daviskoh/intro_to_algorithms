@@ -23,18 +23,18 @@ NSArray* (^merge)(NSArray*, NSArray*, int) = ^(NSArray *array1, NSArray *array2,
     NSMutableArray *result = [[NSMutableArray alloc] init];
     int i = 0;
     int j = 0;
-    int halfLen = resultLen / 2;
-    
-    NSLog(@"*************** Logging loop *****************");
+
     for (int k = 0; k <= resultLen - 1; k++) {
-        NSLog(@"k: %d", k);
-        NSLog(@"i: %d", i);
-        NSLog(@"j: %d", j);
-        
-        if (j == halfLen || array1[i] < array2[j]) {
+        if (j == array2.count) {
             result[k] = array1[i];
             i++;
-        } else if (i == halfLen || array2[j] < array1[i]) {
+        } else if (i == array1.count) {
+            result[k] = array2[j];
+            j++;
+        } else if (array1[i] < array2[j]) {
+            result[k] = array1[i];
+            i++;
+        } else if (array2[j] < array1[i]) {
             result[k] = array2[j];
             j++;
         }
@@ -49,14 +49,20 @@ NSArray* (^mergeSort)(NSArray *) = ^(NSArray *array) {
     NSArray *firstHalf;
     NSArray *secondHalf;
     NSRange halfOfInput;
+    NSUInteger halfOfArray = array.count / 2;
+    NSUInteger remainder = array.count % 2;
     
     halfOfInput.location = 0;
-    halfOfInput.length = array.count / 2;
-    firstHalf = [array subarrayWithRange: halfOfInput];
+    halfOfInput.length = halfOfArray;
+    firstHalf = mergeSort([array subarrayWithRange: halfOfInput]);
+    
+    NSLog(@"firstHalf: %@", firstHalf);
     
     halfOfInput.location = firstHalf.count;
-    halfOfInput.length = array.count / 2;
-    secondHalf = [array subarrayWithRange: halfOfInput];
+    halfOfInput.length = remainder ? halfOfArray + remainder : halfOfArray;
+    secondHalf = mergeSort([array subarrayWithRange: halfOfInput]);
+
+    NSLog(@"secondHalf: %@", secondHalf);
     
     return merge(firstHalf, secondHalf, (int)array.count);
 };

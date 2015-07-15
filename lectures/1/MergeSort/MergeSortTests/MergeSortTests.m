@@ -50,7 +50,15 @@
 }
 
 - (void)testOddNumberOfElements {
-    
+    result = mergeSort(@[@5, @2, @3]);
+    expectation = @[@2, @3, @5];
+    XCTAssertEqualObjects(result, expectation);
+}
+
+- (void)testRecursingThroughLargeArray {
+    result = mergeSort(@[@4, @9, @5, @2]);
+    expectation = @[@2, @4, @5, @9];
+    XCTAssertEqualObjects(result, expectation);
 }
 
 #pragma mark - extra credit
