@@ -9,7 +9,10 @@
 #import <XCTest/XCTest.h>
 #import "MergeSort.h"
 
-@interface MergeSortTests : XCTestCase
+@interface MergeSortTests : XCTestCase {
+    NSArray *result;
+    NSArray *expectation;
+}
 
 @end
 
@@ -26,8 +29,6 @@
 }
 
 - (void)testBaseCase {
-    NSArray *result;
-    
     result = mergeSort(@[]);
     XCTAssertEqualObjects(result, @[]);
     
@@ -38,11 +39,24 @@
     XCTAssertEqualObjects(result, @[@99]);
 }
 
-//- (void)testPerformanceExample {
-//    // This is an example of a performance test case.
-//    [self measureBlock:^{
-//        // Put the code you want to measure the time of here.
-//    }];
-//}
+- (void)testSimpleMerge {
+    result = mergeSort(@[@2,@1]);
+    expectation = @[@1, @2];
+    XCTAssertEqualObjects(result, expectation);
+    
+    result = mergeSort(@[@5,@3]);
+    expectation = @[@3, @5];
+    XCTAssertEqualObjects(result, expectation);
+}
+
+- (void)testOddNumberOfElements {
+    
+}
+
+#pragma mark - extra credit
+
+- (void)testDuplicateValues {
+    
+}
 
 @end
