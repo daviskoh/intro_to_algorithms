@@ -27,23 +27,16 @@ NSArray* (^merge)(NSArray*, NSArray*, int) = ^(NSArray *array1, NSArray *array2,
     for (int k = 0; k <= resultLen - 1; k++) {
         // TODO: optimize ghetto conditionals
         if (j == array2.count) {
-            result[k] = array1[i];
-            i++;
+            result[k] = array1[i++];
         } else if (i == array1.count) {
-            result[k] = array2[j];
-            j++;
+            result[k] = array2[j++];
         } else if (array1[i] < array2[j]) {
-            result[k] = array1[i];
-            i++;
+            result[k] = array1[i++];
         } else if (array2[j] < array1[i]) {
-            result[k] = array2[j];
-            j++;
+            result[k] = array2[j++];
         } else {
-            result[k] = array1[i];
-            result[k+1] = array2[j];
-            i++;
-            j++;
-            k++;
+            result[k] = array1[i++];
+            result[(k++) + 1] = array2[j++];
         }
     }
     
