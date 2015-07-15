@@ -125,3 +125,5 @@ Justifications:
 
 3) Asymptotic Analysis - focus on running time for *large* input sizes n  
 
+**fast algorithm** ≈ worst-case running time grows slowly w/ input size   
+holy grail - linear running time (or close to it)
