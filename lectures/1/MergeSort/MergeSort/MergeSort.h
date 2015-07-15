@@ -56,13 +56,9 @@ NSArray* (^mergeSort)(NSArray *) = ^(NSArray *array) {
     halfOfInput.length = halfOfArray;
     firstHalf = mergeSort([array subarrayWithRange: halfOfInput]);
     
-    NSLog(@"firstHalf: %@", firstHalf);
-    
     halfOfInput.location = firstHalf.count;
     halfOfInput.length = remainder ? halfOfArray + remainder : halfOfArray;
     secondHalf = mergeSort([array subarrayWithRange: halfOfInput]);
-
-    NSLog(@"secondHalf: %@", secondHalf);
     
     return merge(firstHalf, secondHalf, (int)array.count);
 };
