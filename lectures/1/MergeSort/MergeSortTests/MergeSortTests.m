@@ -64,7 +64,9 @@
 #pragma mark - extra credit
 
 - (void)testDuplicateValues {
-    
+    result = mergeSort(@[@5, @4, @9, @5, @2, @2]);
+    expectation = @[@2, @2, @4, @5, @5, @9];
+    XCTAssertEqualObjects(result, expectation);
 }
 
 @end
