@@ -115,4 +115,13 @@ NOTE: 6 comes from the fact that this when given array of size n, will execute *
 
 ## Guiding Principles for Analysis of Algorithms
 
+1) Worst Case Analysis - over running time bound holds for *every* input of length n
+
+2) Ignore Constant Factors, Lower-Order Terms  
+Justifications:   
+- mathematically easier  
+- constants depend on programming architecture / compiler / programmer   
+- lose very little predictive power   
+
+3) Asymptotic Analysis - focus on running time for *large* input sizes n  
 
