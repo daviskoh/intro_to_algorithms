@@ -63,3 +63,37 @@ return false
 
 Running Time: O((n^2)/2) -> O(n^2) because still have double for-loops and lower-order term (2) gets suppressed
 
+## Big O Notation
+
+let T(n) = func on n=1,2,3,...
+usually the worst-case running time of an algo
+
+Q: when is T(n) = O(f(n))?  
+A: if eventually for all sufficiently large n, T(n) is bounded above by a constant multiple of f(n)
+
+Formal Definition: T(n) = O(f(n)) if and only if there exist constants c, n0 > 0 such that T(n) <= c*f(n) for all n >= n0  
+warning: c*n0 cannot depend on n
+
+## Basic Examples
+
+### Example #1  
+Claim: if T(n) = akn^k + ... + a1n + a0 then T(n) = O(n^k)  
+meaning: big O really suppresses constants factors and lower-order terms  
+Proof: Choose n0 = 1 and c = |ak| + |ak|.... TODO: (2:10 mark) / check typed notes  
+
+### Example #2
+Claim: for every k >= 1, n^k is **not** O(n^(k-1))  
+Proof: by contradiction. Suppose n^k = O(n^(k-1))  TODO: (6:45 mark) / check typed notes  
+
+## Big Omega and Theta
+
+Omega: T(n) = Ω(f(n)) if and only if ?? constants .... TODO: (1:00 mark) / check typed notes
+
+Theta: T(n) = Θ(f(n)) if and onyl if T(n) = O(f(n)) **and** T(n) = Ω(f(n))  
+Equivalent: TODO: (2:25 mark) / check typed notes
+
+## Additional Examples
+
+TODO: view lecture - practice
+
+
