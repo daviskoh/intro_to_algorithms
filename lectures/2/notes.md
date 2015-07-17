@@ -76,24 +76,8 @@ warning: c*n0 cannot depend on n
 
 ## Basic Examples
 
-### Example #1  
-Claim: if T(n) = akn^k + ... + a1n + a0 then T(n) = O(n^k)  
-meaning: big O really suppresses constants factors and lower-order terms  
-Proof: Choose n0 = 1 and c = |ak| + |ak|.... TODO: (2:10 mark) / check typed notes  
-
-### Example #2
-Claim: for every k >= 1, n^k is **not** O(n^(k-1))  
-Proof: by contradiction. Suppose n^k = O(n^(k-1))  TODO: (6:45 mark) / check typed notes  
-
 ## Big Omega and Theta
-
-Omega: T(n) = Ω(f(n)) if and only if ?? constants .... TODO: (1:00 mark) / check typed notes
-
-Theta: T(n) = Θ(f(n)) if and onyl if T(n) = O(f(n)) **and** T(n) = Ω(f(n))  
-Equivalent: TODO: (2:25 mark) / check typed notes
 
 ## Additional Examples
 
-TODO: view lecture - practice
-
-
+**see lecture slides**
