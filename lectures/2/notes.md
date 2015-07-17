@@ -76,7 +76,11 @@ warning: c*n0 cannot depend on n
 
 ## Basic Examples
 
+Big O - analogous to saying f1(n) is <= f2(n) aka 1 func is less than to equal to another
+
 ## Big Omega and Theta
+
+Theta - f1(n) == f2(n) asymptotically
 
 ## Additional Examples
 
