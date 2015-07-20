@@ -10,4 +10,10 @@
 
 @implementation  NSArray (CountInversions)
 
+- (int)countInversions {
+    if ([self count] < 2) return 0;
+    
+    return 0;
+}
+
 @end

@@ -10,4 +10,6 @@
 
 @interface NSArray (CountInversions)
 
+- (int)countInversions;
+
 @end

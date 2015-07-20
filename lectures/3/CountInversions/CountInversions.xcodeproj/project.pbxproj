@@ -12,6 +12,8 @@
 		DD9BA53A1B5C7B2E00B68295 /* CountInversionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9BA5391B5C7B2E00B68295 /* CountInversionsTests.m */; };
 		DD9BA5461B5C7BD400B68295 /* NSArray+CountInversions.h in Headers */ = {isa = PBXBuildFile; fileRef = DD9BA5441B5C7BD400B68295 /* NSArray+CountInversions.h */; };
 		DD9BA5471B5C7BD400B68295 /* NSArray+CountInversions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9BA5451B5C7BD400B68295 /* NSArray+CountInversions.m */; };
+		DD9BA5491B5C7C9000B68295 /* TestCountInversions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9BA5481B5C7C9000B68295 /* TestCountInversions.m */; };
+		DD9BA54C1B5C7D7200B68295 /* NSArray+CountInversions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD9BA5451B5C7BD400B68295 /* NSArray+CountInversions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,7 @@
 		DD9BA53B1B5C7B2E00B68295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9BA5441B5C7BD400B68295 /* NSArray+CountInversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CountInversions.h"; sourceTree = "<group>"; };
 		DD9BA5451B5C7BD400B68295 /* NSArray+CountInversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CountInversions.m"; sourceTree = "<group>"; };
+		DD9BA5481B5C7C9000B68295 /* TestCountInversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCountInversions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 		DD9BA5381B5C7B2E00B68295 /* CountInversionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD9BA5481B5C7C9000B68295 /* TestCountInversions.m */,
 				DD9BA5391B5C7B2E00B68295 /* CountInversionsTests.m */,
 				DD9BA53B1B5C7B2E00B68295 /* Info.plist */,
 			);
@@ -208,7 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9BA54C1B5C7D7200B68295 /* NSArray+CountInversions.m in Sources */,
 				DD9BA53A1B5C7B2E00B68295 /* CountInversionsTests.m in Sources */,
+				DD9BA5491B5C7C9000B68295 /* TestCountInversions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
