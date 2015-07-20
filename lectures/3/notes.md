@@ -105,7 +105,14 @@ Fact: better than cubic time (O(n^3))
 
 Details  
 x = [[A, B], [C, D]] and y = [[E, F], [O, H]]  
-7 Products: P1 = A(F-H), P2 = (A + B)H, P3 = (C+D)E, P4 = D(G-E), P5 = (A+D)(E+H), P6 = (B-D)(G+H), P7 = (A-C)(E+F)  
+7 Products:
+P1 = A(F-H)  
+P2 = (A + B)H  
+P3 = (C+D)E  
+P4 = D(G-E)  
+P5 = (A+D)(E+H)  
+P6 = (B-D)(G+H)  
+P7 = (A-C)(E+F)   
 Claim: x * y = [[AE + BG, AF + BH], [CE + DG, CF + DH]] = [[P5+P4-P2+P6, P1+P2], [P3+P4, P1+P5-P3-P7]]  
 Proof: AE + AH + DE + DH + DG - DE - AH - BH + BG + BH - DG - DH = AE + BG  
 
