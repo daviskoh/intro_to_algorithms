@@ -11,6 +11,7 @@
 
 @interface TestCountInversions : XCTestCase {
     NSArray *array;
+    NSDictionary *expectation;
 }
 
 @end
@@ -29,12 +30,26 @@
 
 - (void)testBaseCase {
     array = @[];
-    XCTAssertEqual([array countInversions], 0);
+    XCTAssertEqualObjects([array countInversions][@"inversions"], @0);
     
     array = @[@1];
-    XCTAssertEqual([array countInversions], 0);
+    XCTAssertEqualObjects([array countInversions][@"inversions"], @0);
 }
 
+- (void)testSingleOccurrence {
+    array = @[@2,@1];
+    XCTAssertEqualObjects([array countInversions][@"inversions"], @1);
+    
+    array = @[@9,@5];
+    XCTAssertEqualObjects([array countInversions][@"inversions"], @1);
+}
 
+- (void)testRecursiveCase {
+    array = @[@1, @3, @5, @2, @4, @6];
+    XCTAssertEqualObjects([array countInversions][@"inversions"], @3);
+    
+    array = @[@9, @5, @3, @6, @8];
+    XCTAssertEqualObjects([array countInversions][@"inversions"], @5);
+}
 
 @end
