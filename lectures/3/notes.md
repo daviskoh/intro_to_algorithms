@@ -86,9 +86,13 @@ Proof: let x be an element of 1 array B
 - x & y are split inversion  
 
 **MergeAndCountSplitInv** High-Level    
+
+```
 1st half B, 2nd half C, output D  
 - while merging 2 sorted subarrays, keep running total of number of split inversions  
 - when element of 2nd array C gets copied to output D, incr total by number of elements remaining in 1st array B  
+```
+
 Run time of subroutine: O(n) + O(n) = O(n)  
 SortAndCount runs in O( n log n) time (**just like merge sort**)  
 
