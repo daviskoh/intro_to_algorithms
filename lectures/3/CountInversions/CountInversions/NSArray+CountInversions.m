@@ -24,12 +24,12 @@ NSMutableDictionary* (^merge)(NSArray*, NSArray*, int) = ^(NSArray *array1, NSAr
             result[@"array"][k] = array1[i++];
         } else if (i == array1.count) {
             result[@"array"][k] = array2[j++];
-             result[@"inversions"] = [NSNumber numberWithInt:[result[@"inversions"] intValue] + 1];
+            result[@"inversions"] = @([result[@"inversions"] intValue] + array1.count - i);
         } else if (array1[i] < array2[j]) {
             result[@"array"][k] = array1[i++];
         } else if (array2[j] < array1[i]) {
             result[@"array"][k] = array2[j++];
-            result[@"inversions"] = [NSNumber numberWithInt:[result[@"inversions"] intValue] + 1];
+            result[@"inversions"] = @([result[@"inversions"] intValue] + array1.count - i);
         } else {
             result[@"array"][k] = array1[i++];
             result[@"array"][(k++) + 1] = array2[j++];
