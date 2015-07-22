@@ -62,7 +62,7 @@ func merge(array1, array2, resultLen) -> array
     c = []
     i, j = 0
 
-    for k 0..resultLen-1
+    for k 0..resultLen-1 // or while i < array1.count && j < array2.count
         if array1[i] < array2[j]
             c[k] = array1[i]
             i++
