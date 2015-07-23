@@ -105,8 +105,9 @@ NOTE: log2n = # of times you divide by 2 until you get down to 1
 
 Proof of Claim (assuming n = power of 2)
 
-Binary Tree for recursion levels  
-- has log2n levels of recursive calls because input size decreases by factor of 2 w/ each recursion until rounds out at 1 (base case)
+**Binary Tree for recursion levels**  
+- has **log2n** levels of recursive calls because input size decreases by factor of 2 w/ each recursion until rounds out at 1 (base case)  
+QUESTION: So does divide & conquer algo w/ 3 recursive calls translate to log3n? (@daviskoh)
 
 Proof:  
 At each level j = 0, 1, 2, .., log2n: there are 2^j subproblems each size of n/(2^j)  
